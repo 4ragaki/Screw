@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Screw</string>
+
+    <string name="poweroff_success">Power Off Success!</string>
+    <string name="reboot_success">Reboot Success!</string>
+    <string name="notification_unavailable">service unavailable.</string>
+
+    <string name="config_category_config">Config</string>
+    <string name="config_category_power">Power</string>
+    <string name="config_reboot_title">Reboot</string>
+    <string name="reboot_alert_title">Reboot</string>
+    <string name="reboot_alert_message">Reboot now?</string>
+    <string name="config_poweroff_title">Power Off</string>
+    <string name="poweroff_alert_title">Power Off</string>
+    <string name="poweroff_alert_message">Power Off now?</string>
+
+    <string name="preference_category_credential_title">Credential</string>
+    <string name="preference_password_title">Password</string>
+    <string name="preference_password_summary">router admin password</string>
+    <string name="preference_category_notification_title">Notification</string>
+    <string name="preference_notification_title">Enable Notification</string>
+    <string name="preference_notification_summary_on">notification service enabled.</string>
+    <string name="preference_notification_summary_off">notification service disabled.</string>
+    <string name="preference_wan_speed_title">Show traffic speed</string>
+    <string name="preference_wan_speed_summary">show realtime traffic speed.</string>
+    <string name="preference_status_interval_title">Status update interval by sec</string>
+    <string name="preference_speed_interval_title">Speed update interval by sec</string>
+
+    <string name="title_activity_inbox">Inbox</string>
+
+    <string name="tip_status">Status:</string>
+    <string name="tip_wan">Wan:</string>
+    <string name="tip_lan">Lan:</string>
+    <string name="require_password">Enter password!</string>
+    <string name="not_router">gateway didn\'t respond,Quiting.</string>
+
+    <string name="retry">Retry</string>
+    <string name="login">Login</string>
+    <string name="sms_to">to</string>
+    <string name="sms_body">body</string>
+    <string name="draft_send">Send</string>
+    <string name="draft_cancel">Cancel</string>
+
+    <string name="config_wifi">WIFI Settings</string>
+    <string name="config_mobile">Mobile Network</string>
+    <string name="config_admin">Administrator Password</string>
+    <string name="config_smart">Smart Management</string>
+    <string name="config_upgrade">Upgrade Software</string>
+    <string name="config_manage">Router Management</string>
+    <string name="config_self_check">Router Self-check</string>
+    <string name="config_about">About</string>
+    <string name="wifi_ssid">SSID</string>
+    <string name="wifi_psk">PSK</string>
+    <string name="wifi_apply">Apply</string>
+    <string name="sms_send_failed">send failed,check phone number.</string>
+    <string name="sms_delete_failed">delete failed!</string>
+</resources>

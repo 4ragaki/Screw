@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/ic_notification_battery.xml" value="0.2712962962962963" />
+        <entry key="app/src/main/res/drawable/ic_notification_sms.xml" value="0.2712962962962963" />
+        <entry key="app/src/main/res/drawable/ic_notification_status.xml" value="0.2712962962962963" />
+        <entry key="app/src/main/res/drawable/ic_notification_traffic.xml" value="0.2712962962962963" />
+        <entry key="app/src/main/res/drawable/ic_notification_users.xml" value="0.2712962962962963" />
+        <entry key="app/src/main/res/drawable/rounded_dialog.xml" value="0.2712962962962963" />
+        <entry key="app/src/main/res/layout/remote_notification.xml" value="0.42752293577981654" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<resources>
+
+    <style name="ActionChip" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipBackgroundColor">@color/colorActionChip</item>
+    </style>
+
+    <style name="BottomSheetDialog.Squircle" parent="Theme.MaterialComponents.DayNight.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheet.Modal.Squircle</item>
+    </style>
+
+    <style name="BottomSheet.Modal.Squircle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_main">
+
+    <fragment
+        android:id="@+id/nav_main"
+        android:name="fun.aragaki.screw.ui.MainFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_show_WifiSettings"
+            app:destination="@id/nav_wifi_settings" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/nav_wifi_settings"
+        android:name="fun.aragaki.screw.ui.configs.WifiSettingsFragment"
+        android:label="@string/config_wifi"
+        tools:layout="@layout/fragment_wifi_settings" />
+
+</navigation>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingHorizontal="8dp"
+    tools:ignore="UseCompatTextViewDrawableXml"
+    tools:layout_height="64dp">
+
+    <TextView
+        android:id="@+id/tv_disconnected"
+        style="@style/TextAppearance.Compat.Notification.Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notification_unavailable"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_active_users"
+            style="@style/TextAppearance.Compat.Notification.Info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_notification_users"
+            android:gravity="center"
+            tools:text="3" />
+
+        <TextView
+            android:id="@+id/tv_newSms"
+            style="@style/TextAppearance.Compat.Notification.Info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_notification_sms"
+            android:gravity="center"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/tv_traffic"
+            style="@style/TextAppearance.Compat.Notification.Info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_notification_traffic"
+            android:gravity="center"
+            tools:text="53GB" />
+
+        <TextView
+            android:id="@+id/tv_battery"
+            style="@style/TextAppearance.Compat.Notification.Info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_notification_battery"
+            android:gravity="center"
+            tools:text="82%" />
+    </LinearLayout>
+</FrameLayout>

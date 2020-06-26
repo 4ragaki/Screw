@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="status"
+            type="fun.aragaki.screw.data.entities.Status1" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/bounching_ball" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_dashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/tv_tip_status"
+                        style="@style/TextAppearance.MaterialComponents.Overline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tip_status"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/cg_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_tip_status">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_device_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/fmt_device_name(status.sysInfo.deviceName)}"
+                            tools:text="MF855" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_battery_percent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/fmt_battery_percent(status.batteryInfo.batteryPercent)}"
+                            tools:text="85%" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_network"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/fmt_network_name(status.wan.networkName)}"
+                            tools:text="CHN-UNICOM" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_version"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/fmt_version(status.sysInfo.versionNum)}"
+                            tools:text="2.5.96_release_MF855_NZ_CP_2.129.003" />
+
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_uptime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/fmt_uptime(status.lan.runDays,status.lan.runHours,status.lan.runMinutes,status.lan.runSeconds)}"
+                            tools:text="3h15min" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_new_message"
+                            style="@style/ActionChip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/fmt_newMessage(status.message.newSmsNum)}"
+                            tools:text="0" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_auto_reboot"
+                            style="@style/ActionChip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/fmt_autoReboot(status.autoReboot.autoRebootEnabled)}"
+                            tools:text="False" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_auto_reboot_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/fmt_autoRebootTime(status.autoReboot.autoRebootTime)}"
+                            tools:text="04:00" />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <TextView
+                        android:id="@+id/tv_tip_wan"
+                        style="@style/TextAppearance.MaterialComponents.Overline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/tip_wan"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cg_status" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/cg_wan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_tip_wan">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_msisdn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/fmt_msisdn(status.wan.MSISDN)}"
+                            tools:text="+8617628951024" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_ipv4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/fmt_ipv4(status.wan.cellular.pdpContextList.get(0).ipv4)}"
+                            tools:text="10.224.9.142" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_ipv6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/fmt_ipv6(status.wan.cellular.pdpContextList.get(0).ipv6)}"
+                            tools:text="NA" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_connectTime"
+                            format="@{@string/fmt_curConnTime}"
+                            seconds="@{status.wan.cellular.pdpContextList.get(0).curConnTime}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="11391" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_totalConnectTime"
+                            format="@{@string/fmt_totalConnTime}"
+                            seconds="@{status.wan.cellular.pdpContextList.get(0).totalConnTime}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="7948766" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_transmit"
+                            bytes="@{status.statistics.wanStatistics.txByte}"
+                            format="@{@string/fmt_transmit}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="tx:15 MB" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_receive"
+                            bytes="@{status.statistics.wanStatistics.rxByte}"
+                            format="@{@string/fmt_receive}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="rx:123 MB" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_send_total"
+                            bytes="@{status.statistics.wanStatistics.txByteAll}"
+                            format="@{@string/fmt_sendTotal}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="25172443413" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_receive_total"
+                            bytes="@{status.statistics.wanStatistics.rxByteAll}"
+                            format="@{@string/fmt_receiveTotal}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="324044411308" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_traffic_totalDaily"
+                            bytes="@{status.statistics.wanStatistics.totalUsedDaily}"
+                            format="@{@string/fmt_trafficTotalDaily}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="3136913" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_trafficMonth"
+                            bytes="@{status.statistics.wanStatistics.totalUsedMonth}"
+                            format="@{@string/fmt_trafficTotalMonth}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="6867458679" />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <TextView
+                        android:id="@+id/tv_tip_lan"
+                        style="@style/TextAppearance.MaterialComponents.Overline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/tip_lan"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cg_wan" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/cg_lan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_tip_lan">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_lan_ip"
+                            style="@style/ActionChip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/fmt_lan_ip(status.lan.ip)}"
+                            tools:text="192.168.21.1" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_lan_mac"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/fmt_lan_mac(status.lan.mac)}"
+                            tools:text="74:a3:4a:9b:60:97" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_devices_count"
+                            style="@style/ActionChip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/fmt_deviceCount(status.deviceManagement.nrConnectedDev)}"
+                            tools:text="2" />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

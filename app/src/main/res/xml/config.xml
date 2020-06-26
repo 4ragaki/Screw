@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/config_category_config">
+        <Preference
+            android:icon="@drawable/ic_config_wifi"
+            android:key="@string/cfg_key_wifi"
+            android:title="@string/config_wifi" />
+        <Preference
+            android:icon="@drawable/ic_config_mobile"
+            android:key="@string/cfg_key_mobile"
+            android:title="@string/config_mobile" />
+        <Preference
+            android:icon="@drawable/ic_config_admin"
+            android:key="@string/cfg_key_admin"
+            android:title="@string/config_admin" />
+        <Preference
+            android:icon="@drawable/ic_config_smart_mng"
+            android:key="@string/cfg_key_smart_mng"
+            android:title="@string/config_smart" />
+        <Preference
+            android:icon="@drawable/ic_config_upgrade"
+            android:key="@string/cfg_key_upgrade"
+            android:title="@string/config_upgrade" />
+        <Preference
+            android:icon="@drawable/ic_config_rtr_mng"
+            android:key="@string/cfg_key_router_mng"
+            android:title="@string/config_manage" />
+        <Preference
+            android:icon="@drawable/ic_config_self_check"
+            android:key="@string/cfg_key_self_check"
+            android:title="@string/config_self_check" />
+        <Preference
+            android:icon="@drawable/ic_config_about"
+            android:key="@string/cfg_key_about"
+            android:title="@string/config_about" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/config_category_power">
+        <Preference
+            android:icon="@drawable/ic_config_reboot"
+            android:key="@string/cfg_key_reboot"
+            android:title="@string/config_reboot_title" />
+        <Preference
+            android:icon="@drawable/ic_config_poweroff"
+            android:key="@string/cfg_key_power_off"
+            android:title="@string/config_poweroff_title" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

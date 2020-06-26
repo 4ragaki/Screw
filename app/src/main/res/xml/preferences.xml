@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/preference_category_credential_title">
+
+        <EditTextPreference
+            android:icon="@drawable/ic_pref_password"
+            android:key="@string/pref_key_password"
+            android:summary="@string/preference_password_summary"
+            android:title="@string/preference_password_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/preference_category_notification_title">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_pref_notification"
+            android:key="@string/pref_key_notification"
+            android:summaryOff="@string/preference_notification_summary_off"
+            android:summaryOn="@string/preference_notification_summary_on"
+            android:title="@string/preference_notification_title" />
+
+        <SeekBarPreference
+            android:defaultValue="30"
+            android:key="@string/pref_key_notification_interval"
+            android:max="60"
+            android:title="@string/preference_status_interval_title"
+            app:min="10"
+            app:showSeekBarValue="true" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:enabled="false"
+            android:icon="@drawable/ic_pref_wan_speed"
+            android:key="@string/pref_key_traffic_speed"
+            android:summary="@string/preference_wan_speed_summary"
+            android:title="@string/preference_wan_speed_title" />
+
+        <SeekBarPreference
+            android:defaultValue="3"
+            android:key="@string/pref_key_net_speed_interval"
+            android:max="10"
+            android:title="@string/preference_speed_interval_title"
+            app:showSeekBarValue="true" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

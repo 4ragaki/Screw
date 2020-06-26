@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fmt_device_name">%s</string>
+    <string name="fmt_battery_percent">%s%%</string>
+    <string name="fmt_network_name">%s</string>
+    <string name="fmt_version">%s</string>
+    <string name="fmt_uptime">uptime %sd%sh%smin%ss</string>
+    <string name="fmt_newMessage">SMS %s</string>
+    <string name="fmt_autoReboot">auto reboot %s</string>
+    <string name="fmt_autoRebootTime">auto reboot time %s</string>
+
+
+    <string name="fmt_msisdn">%s</string>
+    <string name="fmt_ipv4">ipv4 %s</string>
+    <string name="fmt_ipv6">ipv6 %s</string>
+    <string name="fmt_curConnTime">connect time %s</string>
+    <string name="fmt_totalConnTime">total connect time %s</string>
+    <string name="fmt_transmit">tx %s</string>
+    <string name="fmt_receive">rx %s</string>
+    <string name="fmt_sendTotal">total send %s</string>
+    <string name="fmt_receiveTotal">total receive %s</string>
+    <string name="fmt_trafficTotalDaily">Daily total %s</string>
+    <string name="fmt_trafficTotalMonth">Monthly total %s</string>
+
+    <string name="fmt_lan_ip">%s</string>
+    <string name="fmt_lan_mac">%s</string>
+    <string name="fmt_deviceCount">device count %s</string>
+
+
+    <string name="fmt_poweroff_fail">Poweroff Fail:%s</string>
+    <string name="fmt_reboot_fail">Reboot Fail:%s</string>
+
+    <string name="fmt_status_title">Battery:%s\tSMS:%s\tTrafficMonthly:%sM</string>
+
+    <string name="fmt_msg_date">20%s.%s.%s %s:%s:%s UTC%s</string>
+
+</resources>

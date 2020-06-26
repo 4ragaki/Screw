@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pref_key_password" translatable="false">pref_password</string>
+    <string name="pref_key_notification" translatable="false">pref_notification</string>
+    <string name="pref_key_notification_interval" translatable="false">pref_notification_interval</string>
+    <string name="pref_key_traffic_speed" translatable="false">pref_traffic_speed</string>
+    <string name="pref_key_net_speed_interval" translatable="false">pref_net_speed_interval</string>
+
+    <string name="cfg_key_wifi" translatable="false">cfg_wifi</string>
+    <string name="cfg_key_mobile" translatable="false">cfg_mobile</string>
+    <string name="cfg_key_admin" translatable="false">cfg_admin</string>
+    <string name="cfg_key_smart_mng" translatable="false">cfg_smart_mng</string>
+    <string name="cfg_key_upgrade" translatable="false">cfg_upgrade</string>
+    <string name="cfg_key_router_mng" translatable="false">cfg_router_mng</string>
+    <string name="cfg_key_self_check" translatable="false">cfg_self_check</string>
+    <string name="cfg_key_about" translatable="false">cfg_about</string>
+    <string name="cfg_key_reboot" translatable="false">cfg_reboot</string>
+    <string name="cfg_key_power_off" translatable="false">cfg_power_off</string>
+</resources>
